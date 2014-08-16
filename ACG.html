@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html ng-app>
+<head>
+	<title>{{ user.name }} | Visiting Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-init="user.name= 'Tanay Pant'; user.designation= 'White Hat'; user.email= 'tanay1337@gmail.com'; user.link1= 'http://cyberwizards.org/'; user.tusername='@tanay1337'; user.companylogo= 'http://i.imgur.com/JObOXRt.png'; user.color= 'white'; user.textcolor1= '#287cc2'; user.textcolor2= '#666'">
+	<div id="header" style="opacity: 0.8; background-color: #000000; position: absolute; height: 45px; width: 100%;  top: 0; left: 0; right:0; font-family: 'Arimo', sans-serif;">
+    <div id="header_left" style="color: #f5f8fa; float: left; width: 70%; margin-top: 8px; margin-left: 5%; font-family: 'Arimo', sans-serif;">
+      <font size="5px">
+        <strong>
+          ACG
+        </strong>
+      </font>
+      Angular Card Generator
+    </div>
+	
+  </div>
+	<center>
+	<div style="background-color:{{ user.color }};color:{{ user.textcolor1 }};border: 1px solid #287cc2;font-weight:lighter;width: 480px; margin-top:60px;">
+        <br>
+        <table>
+        	<tr>
+          		<td align="center">
+      					<img ng-src="{{ user.companylogo }}" style="width: 50; height: 50;">
+      				<br>
+          		</td>
+          
+          		<td style="line-height:0.85;padding-right:20px;font-size:19px">
+      				{{ user.name }}
+            		<br>
+      
+      				<span style="color:{{ user.textcolor2 }};font-size:16px;" align="right">{{ user.designation }}</span><br><br><br>
+                   	<table style="table-layout: fixed;">
+              			
+              <tr>
+                <td style="color:{{ user.textcolor2 }};font-size:16px;font-style:italic;line-height:1;padding-right:0px;">
+                  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;font-style:italic;">{{ user.email }}</span><br>
+ 				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;font-style:italic;">{{ user.link1 }}</span><br>
+ 				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;font-style:italic;">{{ user.link2 }}</span><br><br>
+				  <span style="color:{{ user.textcolor2 }};font-size:18px">Twitter:</span>
+              	  <span style="color:{{ user.textcolor1 }};font-size:18px"> {{ user.tusername }}</span>
+           
+              			<br><br><br>
+           
+                </td>
+              </tr>
+            </table>
+           </td>
+        </tr>
+      </table>
+
+    </div>
+    </center>
+	<br><hr><br>
+    <div id="forms" style="align: center; margin-left: 32%; border: 1px solid #000000; width: 480px; padding: 5px 5px 5px 5px;">
+		Full Name: <input type="text" ng-model="user.name" placeholder="Full Name" /><br>
+		Designation: <input type="text" ng-model="user.designation" placeholder="Designation" /><br>
+		Email-ID: <input type="text" ng-model="user.email" placeholder="Email-ID" /><br>
+		Personal Link-1: <input type="text" ng-model="user.link1" placeholder="Personal Link-1" /><br>
+		Personal Link-2: <input type="text" ng-model="user.link2" placeholder="Personal Link-2" /><br>
+		Twitter Username: <input type="text" ng-model="user.tusername" placeholder="Twitter Username" /><br>
+		Company Logo: <input type="text" ng-model="user.companylogo" placeholder="Company Logo URL" /><br>
+    Card Color: <input type="text" ng-model="user.color" placeholder="Card Color" /><br>
+    Text-Color 1: <input type="text" ng-model="user.textcolor1" placeholder="Text-Color 1" /><br>
+    Text-Color 2: <input type="text" ng-model="user.textcolor2" placeholder="Text-Color 2" /><br>
+	</div>
+	<div id="footer" style="opacity: 0.8; position:absolute; left:0px; bottom:0px; height:20px; width:100%; background-color: #000000;">
+    <div id="footer_left" style="color: #ffffff; float: center; width: 70%; margin-left: 10%; font-family: 'Arimo', sans-serif;">
+      <font size="2px">
+        Copyright (c) 2014 Tanay Pant. All rights reserved.
+      </font>
+    </div>
+  </div>
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+</body>
+</html>
