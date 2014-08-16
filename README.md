@@ -5,4 +5,4 @@ ACG (Angular Card Generator), is an application based on HTML, CSS and AngularJS
 
 ###Live Demo:
 	
-[goo.gl/iEEA71](goo.gl/iEEA71)
+[http://goo.gl/iEEA71](http://goo.gl/iEEA71)
