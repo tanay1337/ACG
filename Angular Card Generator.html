@@ -8,7 +8,80 @@
   <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
   
   <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <script src="bower_components/jquery/dist/jquery.js"></script>
 
+  <script>
+  $(document).ready(function(){
+        $("#a").click(function(){
+          $("#1").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#b").click(function(){
+          $("#2").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#c").click(function(){
+          $("#3").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#d").click(function(){
+          $("#4").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#e").click(function(){
+          $("#5").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#f").click(function(){
+          $("#6").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#g").click(function(){
+          $("#7").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#h").click(function(){
+          $("#8").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#i").click(function(){
+          $("#9").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#k").click(function(){
+          $("#10").slideToggle("slow");
+       }
+     );
+   }
+ );
+  </script>
 <style>
 
 	.sidebar-p
@@ -62,64 +135,64 @@ user.textcolor2= '#666'" >
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
                       <li>
-                            <a href="javascript:tblHideShow2('Div1' ,'0')" id="more1"><i class="fa fa-user fa-fw"></i> Full Name</a>
-                            <div id="Div1"  style="display:none;">
+                            <a href="#" id="a"><i class="fa fa-user fa-fw"></i> Full Name</a>
+                            <div id="1"  style="display:none;">
                               <p class="sidebar-p">
                                 Full Name: <input type="text" ng-model="user.name" placeholder="Full Name" /><br>          
                               </p>
                             </div>                            
                         </li>
                         <li>
-                            <a href="javascript:tblHideShow2('Div2' ,'0')" id="more1"><i class="fa fa-star fa-fw"></i> Designation</a>
-                            <div id="Div2"  style="display:none;">
+                            <a href="#" id="b"><i class="fa fa-star fa-fw"></i> Designation</a>
+                            <div id="2"  style="display:none;">
                               <p class="sidebar-p">
                                 Designation: <input type="text" ng-model="user.designation" placeholder="Designation" /><br>
                               </p>
                             </div>  
                         </li>
                         <li>
-                            <a href="javascript:tblHideShow2('Div3' ,'0')" id="more1"><i class="fa fa-comment fa-fw"></i> Email-Id</a>
-                            <div id="Div3"  style="display:none;">
+                            <a href="#" id="c"><i class="fa fa-comment fa-fw"></i> Email-Id</a>
+                            <div id="3"  style="display:none;">
                               <p class="sidebar-p">
                                 Email-ID: <input type="text" ng-model="user.email" placeholder="Email-ID" /><br>
                               </p>
                             </div> 
                         </li>
                         <li>
-                            <a href="javascript:tblHideShow2('Div4' ,'0')" id="more1"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-1</a>
-                            <div id="Div4"  style="display:none;">
+                            <a href="#" id="d"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-1</a>
+                            <div id="4"  style="display:none;">
                               <p class="sidebar-p">
                                 http://<input type="text" ng-model="user.link1" placeholder="Personal Link-1" /><br>
                               </p>
                             </div> 
                         </li>
                         <li>
-                            <a href="javascript:tblHideShow2('Div5' ,'0')" id="more1"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-2</a>
-                            <div id="Div5"  style="display:none;">
+                            <a href="#" id="e"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-2</a>
+                            <div id="5"  style="display:none;">
                               <p class="sidebar-p">
-                                Personal Link-2: <input type="text" ng-model="user.link2" placeholder="Personal Link-2" /><br>
+                                http://<input type="text" ng-model="user.link2" placeholder="Personal Link-2" /><br>
                               </p>
                             </div> 
                         </li>
                         <li>
-                            <a href="javascript:tblHideShow2('Div6' ,'0')" id="more1"><i class="fa fa-twitter fa-fw"></i> Twitter Username</a>
-                            <div id="Div6"  style="display:none;">
+                            <a href="#" id="f"><i class="fa fa-twitter fa-fw"></i> Twitter Username</a>
+                            <div id="6"  style="display:none;">
                               <p class="sidebar-p">
                                 twitter.com/<input type="text" ng-model="user.tusername" placeholder="Twitter Username" /><br>
                               </p>
                             </div> 
                         </li>
                         <li>
-                            <a href="javascript:tblHideShow2('Div7' ,'0')" id="more1"><i class="fa fa-picture-o fa-fw"></i> Company Logo</a>
-                            <div id="Div7"  style="display:none;">
+                            <a href="#" id="g"><i class="fa fa-picture-o fa-fw"></i> Company Logo</a>
+                            <div id="7"  style="display:none;">
                               <p class="sidebar-p">
                                 Company Logo: <input type="text" ng-model="user.companylogo" placeholder="Company Logo URL" /><br>
                               </p>
                             </div> 
                         </li>
                         <li>
-                            <a href="javascript:tblHideShow2('Div8' ,'0')" id="more1"><i class="fa fa-qrcode fa-fw"></i> Card Color</a>
-                            <div id="Div8"  style="display:none;">
+                            <a href="#" id="h"><i class="fa fa-qrcode fa-fw"></i> Card Color</a>
+                            <div id="8"  style="display:none;">
                               <p class="sidebar-p">
                                 Card Color1: <input type="color" ng-model="user.color1" placeholder="Card Color1" /><br>
                               </p>
@@ -129,16 +202,16 @@ user.textcolor2= '#666'" >
                             </div> 
                         </li>
                         <li>
-                            <a href="javascript:tblHideShow2('Div9' ,'0')" id="more1"><i class="fa fa-angle-right fa-fw"></i> Text Color-1</a>
-                            <div id="Div9"  style="display:none;">
+                            <a href="#" id="i"><i class="fa fa-angle-right fa-fw"></i> Text Color-1</a>
+                            <div id="9"  style="display:none;">
                               <p class="sidebar-p">
                                 Text-Color 1: <input type="color" ng-model="user.textcolor1" placeholder="Text-Color 1" /><br>
                               </p>
                             </div> 
                         </li>
                         <li>
-                            <a href="javascript:tblHideShow2('Div10' ,'0')" id="more1"><i class="fa fa-angle-right fa-fw"></i> Text Color-2</a>
-                            <div id="Div10"  style="display:none;">
+                            <a href="#" id="j"><i class="fa fa-angle-right fa-fw"></i> Text Color-2</a>
+                            <div id="10"  style="display:none;">
                               <p class="sidebar-p">
                                 Text-Color 2: <input type="color" ng-model="user.textcolor2" placeholder="Text-Color 2" /><br>
                               </p>
@@ -181,7 +254,7 @@ box-shadow: 0px 0px 10px rgb(17, 17, 17);" >
                 <td style="color:{{ user.textcolor2 }};font-size:16px;line-height:1;padding-right:0px;">
                   <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a href="mailto:{{ user.email }}" class="" >{{ user.email }}</a></span><br>
  				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a href="http://{{ user.link1 }}" class=""  target="_blank">{{ user.link1 }}</a></span><br>
- 				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a href="{{ user.link2 }}" class=""  target="_blank">{{ user.link2 }}</a></span><br><br>
+ 				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a href="http://{{ user.link2 }}" class=""  target="_blank">{{ user.link2 }}</a></span><br><br>
 				  
               	  
 		<span style="color:{{ user.textcolor1 }};font-size:18px"><a href="https://www.twitter.com/{{ user.tusername }}" style="text-decoration:none;" target="_blank" ><i class="fa fa-twitter fa-fw"></i> @{{ user.tusername }}</a></span><br>
@@ -210,7 +283,6 @@ box-shadow: 0px 0px 10px rgb(17, 17, 17);" >
   </div>
     
 	<script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/common.js"></script>
 </body>
 </html>
