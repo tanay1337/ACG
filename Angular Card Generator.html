@@ -21,11 +21,25 @@
 		font-style:normal; 
 	}
 
+.card-main
+{
+
+}
 </style>
 
 </head>
 
-<body ng-init="user.name= 'Tanay Pant'; user.designation= 'White Hat'; user.email= 'tanay1337@gmail.com'; user.link1= 'http://cyberwizards.org/'; user.tusername='@tanay1337'; user.companylogo= 'http://i.imgur.com/JObOXRt.png'; user.color= 'white'; user.textcolor1= '#287cc2'; user.textcolor2= '#666'">
+<body ng-init="
+user.name= 'Tanay Pant'; 
+user.designation= 'White Hat'; 
+user.email= 'tanay1337@gmail.com'; 
+user.link1= 'cyberwizards.org'; 
+user.tusername='tanay1337'; 
+user.companylogo= 'http://i.imgur.com/JObOXRt.png'; 
+user.color1= '#dcdcdc'; 
+user.color2= 'white'; 
+user.textcolor1= '#287cc2'; 
+user.textcolor2= '#666'" >
 
 	<nav id="header" class="navbar navbar-default" role="navigation">
 
@@ -75,7 +89,7 @@
                             <a href="javascript:tblHideShow2('Div4' ,'0')" id="more1"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-1</a>
                             <div id="Div4"  style="display:none;">
                               <p class="sidebar-p">
-                                Personal Link-1: <input type="text" ng-model="user.link1" placeholder="Personal Link-1" /><br>
+                                http://<input type="text" ng-model="user.link1" placeholder="Personal Link-1" /><br>
                               </p>
                             </div> 
                         </li>
@@ -91,7 +105,7 @@
                             <a href="javascript:tblHideShow2('Div6' ,'0')" id="more1"><i class="fa fa-twitter fa-fw"></i> Twitter Username</a>
                             <div id="Div6"  style="display:none;">
                               <p class="sidebar-p">
-                                Twitter Username: <input type="text" ng-model="user.tusername" placeholder="Twitter Username" /><br>
+                                https://www.twitter.com/<input type="text" ng-model="user.tusername" placeholder="Twitter Username" /><br>
                               </p>
                             </div> 
                         </li>
@@ -107,7 +121,10 @@
                             <a href="javascript:tblHideShow2('Div8' ,'0')" id="more1"><i class="fa fa-qrcode fa-fw"></i> Card Color</a>
                             <div id="Div8"  style="display:none;">
                               <p class="sidebar-p">
-                                Card Color: <input type="color" ng-model="user.color" placeholder="Card Color" /><br>
+                                Card Color1: <input type="color" ng-model="user.color1" placeholder="Card Color1" /><br>
+                              </p>
+							<p class="sidebar-p">
+                                Card Color2: <input type="color" ng-model="user.color2" placeholder="Card Color2" /><br>
                               </p>
                             </div> 
                         </li>
@@ -132,7 +149,19 @@
                   </div>
                 </div>
 	<center>
-	<div style="background-color:{{ user.color }};color:{{ user.textcolor1 }};border: 1px solid #287cc2;font-weight:lighter;width: 480px; margin-top:60px;box-shadow: 0px 0px 10px rgb(17, 17, 17);">
+	<div style="
+background: -webkit-linear-gradient(top, {{ user.color1 }} , {{ user.color2 }}); 
+background: -o-linear-gradient(top,{{ user.color1 }}, {{ user.color2 }});
+background: -moz-linear-gradient(top,{{ user.color1 }}, {{ user.color2 }}); 
+background: linear-gradient(top,{{ user.color1 }}, {{ user.color2 }});
+
+
+color:{{ user.textcolor1 }};
+border: 1px solid #287cc2;
+font-weight:lighter;
+width: 480px; 
+margin-top:60px;
+box-shadow: 0px 0px 10px rgb(17, 17, 17);" >
         <br>
         <table>
         	<tr>
@@ -145,16 +174,17 @@
       				{{ user.name }}
             		<br>
       
-      				<span style="color:{{ user.textcolor2 }};font-size:16px;" align="right">{{ user.designation }}</span><br><br><br>
+      				<span style="color:{{ user.textcolor2 }};font-size:16px;" align="right">{{ user.designation }}</span><br><br>
                    	<table style="table-layout: fixed;">
               			
               <tr>
-                <td style="color:{{ user.textcolor2 }};font-size:16px;font-style:italic;line-height:1;padding-right:0px;">
-                  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;font-style:italic;">{{ user.email }}</span><br>
- 				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;font-style:italic;">{{ user.link1 }}</span><br>
- 				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;font-style:italic;">{{ user.link2 }}</span><br><br>
-				  <span style="color:{{ user.textcolor2 }};font-size:18px">Twitter:</span>
-              	  <span style="color:{{ user.textcolor1 }};font-size:18px"> {{ user.tusername }}</span>
+                <td style="color:{{ user.textcolor2 }};font-size:16px;line-height:1;padding-right:0px;">
+                  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a href="mailto:{{ user.email }}" class="" >{{ user.email }}</a></span><br>
+ 				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a href="http://{{ user.link1 }}" class=""  target="_blank">{{ user.link1 }}</a></span><br>
+ 				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a href="{{ user.link2 }}" class=""  target="_blank">{{ user.link2 }}</a></span><br><br>
+				  
+              	  
+		<span style="color:{{ user.textcolor1 }};font-size:18px"><a href="https://www.twitter.com/{{ user.tusername }}" style="text-decoration:none;" target="_blank" ><i class="fa fa-twitter fa-fw"></i> @{{ user.tusername }}</a></span><br>
            
               			<br><br><br>
            
