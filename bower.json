@@ -1,0 +1,14 @@
+{
+  "name": "ACG",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tanay1337/ACG",
+  "authors": [
+    "tanay1337 <tanay1337@gmail.com>"
+  ],
+  "description": "Angular Business Card Generator",
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "font-awesome": "~4.2.0",
+    "angular": "~1.2.25"
+  }
+}
