@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-  
+  <link href="bower_components/circliful/css/jquery.circlify.css" rel="stylesheet">
   <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/jquery-1.10.2.js"></script>
+  <script src="bower_components/circliful/js/jquery.circliful.min.js"></script>
   <script>
   $(document).ready(function(){
         $("#a").click(function(){
@@ -199,6 +201,7 @@ user.gusername='+TanayPant1337'; " >
                               </p>
                             </div> 
                         </li>
+                        <hr>
                       </ul>
                   </div>
                 </div>
@@ -234,7 +237,7 @@ user.gusername='+TanayPant1337'; " >
                             </div> 
                         </li>
                         <li>
-                            <a href="#" id="f"><i class="fa fa-twitter fa-fw"></i> Twitter Username</a>
+                            <a href="#" id="f"><i class="fa fa-twitter fa-fw"></i> Twitter</a>
                             <div id="6"  style="display:none;">
                               <p class="sidebar-p">
                                 twitter.com/<input type="text" ng-model="user.tusername" placeholder="Twitter Username" /><br>
@@ -257,7 +260,9 @@ user.gusername='+TanayPant1337'; " >
                               </p>
                             </div> 
                         </li>
-
+                        <hr>
+                        <center>Card Rating</center><br>
+                        <div id="myStat" data-dimension="180" data-width="10" data-fontsize="20" data-fgcolor="#55ACEE" data-bgcolor="#eee" data-fill="#ffffff" data-total="100" data-percent="75" data-icon="long-arrow-up" data-icon-size="20" data-icon-color="#000000"></div>
                         </ul>
                   </div>
                 </div>
@@ -297,11 +302,11 @@ box-shadow: 0px 0px 10px rgb(17, 17, 17);" >
           <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a ng-href="http://{{ user.link2 }}" class=""  target="_blank">{{ user.link2 }}</a></span><br><br>
           
                   
-    <span style="color:{{ user.textcolor1 }};font-size:20px"><a ng-href="https://www.twitter.com/{{ user.tusername }}" style="text-decoration:none;" target="_blank" title="@{{ user.tusername }}">&#160<i class="fa fa-twitter fa-fw"></i>&#160</a></span>
+    <span style="color:{{ user.textcolor1 }};font-size:20px"><a ng-href="https://www.twitter.com/{{ user.tusername }}" style="text-decoration:none;" target="_blank" title="@{{ user.tusername }}">&#160<i class="fa fa-twitter fa-fw"></i>&#160</a><span ng-show="!user.fusername && !user.gusername"><font size="3px">@ {{ user.tusername }}</font></span></span>
         
-    <span style="color:{{ user.textcolor1 }};font-size:20px"><a ng-href="https://www.facebook.com/{{ user.fusername }}" style="text-decoration:none;" target="_blank" title="{{ user.name }} on facebook" >&#160<i class="fa fa-facebook fa-fw"></i>&#160</a></span>
+    <span style="color:{{ user.textcolor1 }};font-size:20px" ng-if="user.fusername"><a ng-href="https://www.facebook.com/{{ user.fusername }}" style="text-decoration:none;" target="_blank" title="{{ user.name }} on facebook" >&#160<i class="fa fa-facebook fa-fw"></i>&#160</a></span>
   
-        <span style="color:{{ user.textcolor1 }};font-size:20px"><a ng-href="https://www.google.com/{{ user.gusername }}" style="text-decoration:none;" target="_blank" title="{{ user.name }} on google+">&#160<i class="fa fa-google-plus fa-fw"></i>&#160</a></span><br>
+        <span style="color:{{ user.textcolor1 }};font-size:20px" ng-if="user.gusername"><a ng-href="https://www.google.com/{{ user.gusername }}" style="text-decoration:none;" target="_blank" title="{{ user.name }} on google+">&#160<i class="fa fa-google-plus fa-fw"></i>&#160</a></span><br>
               			<br><br><br>
            
                 </td>
@@ -318,11 +323,16 @@ box-shadow: 0px 0px 10px rgb(17, 17, 17);" >
 	
 	
   <div id="footer" style="opacity: 0.8; position:absolute; left:0px; bottom:0px; height:20px; width:100%; background-color: #ffffff;">
-    <div id="footer_left" style="color: #000000; float: center; width: 70%; margin-left: 10%; font-family: 'Arimo', sans-serif;">
+    <div id="footer_left" style="color: #000000; float: center; width: 70%; margin-left: 3%; font-family: 'Arimo', sans-serif;">
       <font size="2px">
         Copyright &copy; 2014 Tanay Pant. All rights reserved.
       </font>
     </div>
   </div>
+  <script>
+$( document ).ready(function() {
+        $('#myStat').circliful();
+    });
+</script>
 </body>
 </html>
