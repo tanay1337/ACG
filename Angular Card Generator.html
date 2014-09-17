@@ -9,7 +9,7 @@
   
   <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <script src="bower_components/jquery/dist/jquery.js"></script>
-
+  <script src="bower_components/angular/angular.js"></script>
   <script>
   $(document).ready(function(){
         $("#a").click(function(){
@@ -75,14 +75,33 @@
    }
  );
   $(document).ready(function(){
-        $("#k").click(function(){
+        $("#j").click(function(){
           $("#10").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#k").click(function(){
+          $("#11").slideToggle("slow");
+       }
+     );
+   }
+ );
+  $(document).ready(function(){
+        $("#l").click(function(){
+          $("#12").slideToggle("slow");
        }
      );
    }
  );
   </script>
 <style>
+  body {
+        background: url(images/bg-sky.png);
+        background-repeat: repeat !important;
+        background-attachment: fixed;
+      }
 
 	.sidebar-p
 	{
@@ -94,10 +113,6 @@
 		font-style:normal; 
 	}
 
-.card-main
-{
-
-}
 </style>
 
 </head>
@@ -106,13 +121,15 @@
 user.name= 'Tanay Pant'; 
 user.designation= 'White Hat'; 
 user.email= 'tanay1337@gmail.com'; 
-user.link1= 'cyberwizards.org'; 
+user.link1= 'www.cyberwizards.org'; 
 user.tusername='tanay1337'; 
 user.companylogo= 'http://i.imgur.com/JObOXRt.png'; 
-user.color1= '#dcdcdc'; 
+user.color1= '#c0c0c0'; 
 user.color2= 'white'; 
 user.textcolor1= '#287cc2'; 
-user.textcolor2= '#666'" >
+user.textcolor2= '#666';
+user.fusername='...'; 
+user.gusername='+TanayPant1337'; " >
 
 	<nav id="header" class="navbar navbar-default" role="navigation">
 
@@ -131,7 +148,7 @@ user.textcolor2= '#666'" >
 	
   </nav>
 
-<div class="nav navbar-nav side-nav" role="navigation">
+<div class="nav navbar-nav navbar-left" role="navigation">
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
                       <li>
@@ -175,14 +192,6 @@ user.textcolor2= '#666'" >
                             </div> 
                         </li>
                         <li>
-                            <a href="#" id="f"><i class="fa fa-twitter fa-fw"></i> Twitter Username</a>
-                            <div id="6"  style="display:none;">
-                              <p class="sidebar-p">
-                                twitter.com/<input type="text" ng-model="user.tusername" placeholder="Twitter Username" /><br>
-                              </p>
-                            </div> 
-                        </li>
-                        <li>
                             <a href="#" id="g"><i class="fa fa-picture-o fa-fw"></i> Company Logo</a>
                             <div id="7"  style="display:none;">
                               <p class="sidebar-p">
@@ -190,13 +199,20 @@ user.textcolor2= '#666'" >
                               </p>
                             </div> 
                         </li>
-                        <li>
-                            <a href="#" id="h"><i class="fa fa-qrcode fa-fw"></i> Card Color</a>
+                      </ul>
+                  </div>
+                </div>
+
+                <div class="nav navbar-nav navbar-right" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                      <li>
+                            <a href="#" id="h"><i class="fa fa-qrcode fa-fw"></i> Card Gradient Color</a>
                             <div id="8"  style="display:none;">
                               <p class="sidebar-p">
                                 Card Color1: <input type="color" ng-model="user.color1" placeholder="Card Color1" /><br>
                               </p>
-							<p class="sidebar-p">
+              <p class="sidebar-p">
                                 Card Color2: <input type="color" ng-model="user.color2" placeholder="Card Color2" /><br>
                               </p>
                             </div> 
@@ -217,8 +233,32 @@ user.textcolor2= '#666'" >
                               </p>
                             </div> 
                         </li>
+                        <li>
+                            <a href="#" id="f"><i class="fa fa-twitter fa-fw"></i> Twitter Username</a>
+                            <div id="6"  style="display:none;">
+                              <p class="sidebar-p">
+                                twitter.com/<input type="text" ng-model="user.tusername" placeholder="Twitter Username" /><br>
+                              </p>
+                            </div> 
+                        </li>    
+                        <li>
+                            <a href="#" id="k"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
+                            <div id="11"  style="display:none;">
+                              <p class="sidebar-p">
+                                facebook.com/<input type="text" ng-model="user.fusername" placeholder="Facebook Profile" /><br>
+                              </p>
+                            </div> 
+                        </li>
+                     <li>
+                            <a href="#" id="l"><i class="fa fa-google-plus fa-fw"></i> Google+</a>
+                            <div id="12"  style="display:none;">
+                              <p class="sidebar-p">
+                                google.com/<input type="text" ng-model="user.gusername" placeholder="Google+ Profile" /><br>
+                              </p>
+                            </div> 
+                        </li>
 
-                    </ul>
+                        </ul>
                   </div>
                 </div>
 	<center>
@@ -239,26 +279,29 @@ box-shadow: 0px 0px 10px rgb(17, 17, 17);" >
         <table>
         	<tr>
           		<td align="center">
-      					<img ng-src="{{ user.companylogo }}" style="width: 50; height: 50;">
+      					<img ng-src="{{ user.companylogo }}" style="max-width: 200px; max-height: 200px;">
       				<br>
           		</td>
           
           		<td style="line-height:0.85;padding-right:20px;font-size:19px">
-      				{{ user.name }}
-            		<br>
+              {{ user.name }}
+                <br>
       
-      				<span style="color:{{ user.textcolor2 }};font-size:16px;" align="right">{{ user.designation }}</span><br><br>
-                   	<table style="table-layout: fixed;">
-              			
+              <span style="color:{{ user.textcolor2 }};font-size:16px;" align="right">{{ user.designation }}</span><br><br>
+                    <table style="table-layout: fixed;">
+                    
               <tr>
                 <td style="color:{{ user.textcolor2 }};font-size:16px;line-height:1;padding-right:0px;">
-                  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a href="mailto:{{ user.email }}" class="" >{{ user.email }}</a></span><br>
- 				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a href="http://{{ user.link1 }}" class=""  target="_blank">{{ user.link1 }}</a></span><br>
- 				  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a href="http://{{ user.link2 }}" class=""  target="_blank">{{ user.link2 }}</a></span><br><br>
-				  
-              	  
-		<span style="color:{{ user.textcolor1 }};font-size:18px"><a href="https://www.twitter.com/{{ user.tusername }}" style="text-decoration:none;" target="_blank" ><i class="fa fa-twitter fa-fw"></i> @{{ user.tusername }}</a></span><br>
-           
+                  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a ng-href="mailto:{{ user.email }}" class="" >{{ user.email }}</a></span><br>
+          <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a ng-href="http://{{ user.link1 }}" class=""  target="_blank">{{ user.link1 }}</a></span><br>
+          <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a ng-href="http://{{ user.link2 }}" class=""  target="_blank">{{ user.link2 }}</a></span><br><br>
+          
+                  
+    <span style="color:{{ user.textcolor1 }};font-size:20px"><a ng-href="https://www.twitter.com/{{ user.tusername }}" style="text-decoration:none;" target="_blank" title="@{{ user.tusername }}">&#160<i class="fa fa-twitter fa-fw"></i>&#160</a></span>
+        
+    <span style="color:{{ user.textcolor1 }};font-size:20px"><a ng-href="https://www.facebook.com/{{ user.fusername }}" style="text-decoration:none;" target="_blank" title="{{ user.name }} on facebook" >&#160<i class="fa fa-facebook fa-fw"></i>&#160</a></span>
+  
+        <span style="color:{{ user.textcolor1 }};font-size:20px"><a ng-href="https://www.google.com/{{ user.gusername }}" style="text-decoration:none;" target="_blank" title="{{ user.name }} on google+">&#160<i class="fa fa-google-plus fa-fw"></i>&#160</a></span><br>
               			<br><br><br>
            
                 </td>
@@ -281,8 +324,5 @@ box-shadow: 0px 0px 10px rgb(17, 17, 17);" >
       </font>
     </div>
   </div>
-    
-	<script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/common.js"></script>
 </body>
 </html>
