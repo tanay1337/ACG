@@ -2,116 +2,11 @@
 <html lang="en" ng-app>
 <head>
 	<title>{{ user.name }} | Visiting Card</title>
-  
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
   <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <script>
-  $(document).ready(function(){
-        $("#a").click(function(){
-          $("#1").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#b").click(function(){
-          $("#2").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#c").click(function(){
-          $("#3").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#d").click(function(){
-          $("#4").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#e").click(function(){
-          $("#5").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#f").click(function(){
-          $("#6").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#g").click(function(){
-          $("#7").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#h").click(function(){
-          $("#8").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#i").click(function(){
-          $("#9").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#j").click(function(){
-          $("#10").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#k").click(function(){
-          $("#11").slideToggle("slow");
-       }
-     );
-   }
- );
-  $(document).ready(function(){
-        $("#l").click(function(){
-          $("#12").slideToggle("slow");
-       }
-     );
-   }
- );
-  </script>
-<style>
-  body {
-        background: url(images/bg-sky.png);
-        background-repeat: repeat !important;
-        background-attachment: fixed;
-      }
-
-	.sidebar-p
-	{
-		background-color: #f5f8fa; 
-		border-radius: 6px;
-		font-family:Arial, Helvetica, sans-serif; 
-		color:#3E3E3E; 
-		font-size:12px; 
-		font-style:normal; 
-	}
-
-</style>
-
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body ng-init="
@@ -132,7 +27,7 @@ user.gusername='+TanayPant1337'; " >
 
     <div id="header_left" class="navbar-brand" title="Angular Card Generator">
 	<label for="Angular Card Generator">
-      <span style="font-size:20px;">
+      <span class="ACG">
         <strong>
           ACG
         </strong>
@@ -150,7 +45,7 @@ user.gusername='+TanayPant1337'; " >
                     <ul class="nav" id="side-menu">
                       <li>
                             <a href="#" id="a"><i class="fa fa-user fa-fw"></i> Full Name</a>
-                            <div id="1"  style="display:none;">
+                            <div id="1" class="inputfield">
                               <p class="sidebar-p">
                                 Full Name: <input type="text" ng-model="user.name" placeholder="Full Name" /><br>          
                               </p>
@@ -158,7 +53,7 @@ user.gusername='+TanayPant1337'; " >
                         </li>
                         <li>
                             <a href="#" id="b"><i class="fa fa-star fa-fw"></i> Designation</a>
-                            <div id="2"  style="display:none;">
+                            <div id="2"  class="inputfield">
                               <p class="sidebar-p">
                                 Designation: <input type="text" ng-model="user.designation" placeholder="Designation" /><br>
                               </p>
@@ -166,7 +61,7 @@ user.gusername='+TanayPant1337'; " >
                         </li>
                         <li>
                             <a href="#" id="c"><i class="fa fa-comment fa-fw"></i> Email-Id</a>
-                            <div id="3"  style="display:none;">
+                            <div id="3"  class="inputfield">
                               <p class="sidebar-p">
                                 Email-ID: <input type="text" ng-model="user.email" placeholder="Email-ID" /><br>
                               </p>
@@ -174,7 +69,7 @@ user.gusername='+TanayPant1337'; " >
                         </li>
                         <li>
                             <a href="#" id="d"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-1</a>
-                            <div id="4"  style="display:none;">
+                            <div id="4"  class="inputfield">
                               <p class="sidebar-p">
                                 http://<input type="text" ng-model="user.link1" placeholder="Personal Link-1" /><br>
                               </p>
@@ -182,7 +77,7 @@ user.gusername='+TanayPant1337'; " >
                         </li>
                         <li>
                             <a href="#" id="e"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-2</a>
-                            <div id="5"  style="display:none;">
+                            <div id="5"  class="inputfield">
                               <p class="sidebar-p">
                                 http://<input type="text" ng-model="user.link2" placeholder="Personal Link-2" /><br>
                               </p>
@@ -190,7 +85,7 @@ user.gusername='+TanayPant1337'; " >
                         </li>
                         <li>
                             <a href="#" id="g"><i class="fa fa-picture-o fa-fw"></i> Company Logo</a>
-                            <div id="7"  style="display:none;">
+                            <div id="7"  class="inputfield">
                               <p class="sidebar-p">
                                 Company Logo: <input type="text" ng-model="user.companylogo" placeholder="Company Logo URL" /><br>
                               </p>
@@ -206,7 +101,7 @@ user.gusername='+TanayPant1337'; " >
                     <ul class="nav" id="side-menu">
                       <li>
                             <a href="#" id="h"><i class="fa fa-qrcode fa-fw"></i> Card Gradient Color</a>
-                            <div id="8"  style="display:none;">
+                            <div id="8" class="inputfield">
                               <p class="sidebar-p">
                                 Card Color1: <input type="color" ng-model="user.color1" placeholder="Card Color1" /><br>
                               </p>
@@ -217,7 +112,7 @@ user.gusername='+TanayPant1337'; " >
                         </li>
                         <li>
                             <a href="#" id="i"><i class="fa fa-angle-right fa-fw"></i> Text Color-1</a>
-                            <div id="9"  style="display:none;">
+                            <div id="9" class="inputfield">
                               <p class="sidebar-p">
                                 Text-Color 1: <input type="color" ng-model="user.textcolor1" placeholder="Text-Color 1" /><br>
                               </p>
@@ -225,7 +120,7 @@ user.gusername='+TanayPant1337'; " >
                         </li>
                         <li>
                             <a href="#" id="j"><i class="fa fa-angle-right fa-fw"></i> Text Color-2</a>
-                            <div id="10"  style="display:none;">
+                            <div id="10" class="inputfield">
                               <p class="sidebar-p">
                                 Text-Color 2: <input type="color" ng-model="user.textcolor2" placeholder="Text-Color 2" /><br>
                               </p>
@@ -233,7 +128,7 @@ user.gusername='+TanayPant1337'; " >
                         </li>
                         <li>
                             <a href="#" id="f"><i class="fa fa-twitter fa-fw"></i> Twitter</a>
-                            <div id="6"  style="display:none;">
+                            <div id="6" class="inputfield">
                               <p class="sidebar-p">
                                 twitter.com/<input type="text" ng-model="user.tusername" placeholder="Twitter Username" /><br>
                               </p>
@@ -241,7 +136,7 @@ user.gusername='+TanayPant1337'; " >
                         </li>    
                         <li>
                             <a href="#" id="k"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
-                            <div id="11"  style="display:none;">
+                            <div id="11" class="inputfield">
                               <p class="sidebar-p">
                                 facebook.com/<input type="text" ng-model="user.fusername" placeholder="Facebook Profile" /><br>
                               </p>
@@ -249,7 +144,7 @@ user.gusername='+TanayPant1337'; " >
                         </li>
                      <li>
                             <a href="#" id="l"><i class="fa fa-google-plus fa-fw"></i> Google+</a>
-                            <div id="12"  style="display:none;">
+                            <div id="12" class="inputfield">
                               <p class="sidebar-p">
                                 google.com/<input type="text" ng-model="user.gusername" placeholder="Google+ Profile" /><br>
                               </p>
@@ -260,46 +155,34 @@ user.gusername='+TanayPant1337'; " >
                   </div>
                 </div>
 	<center>
-	<div style="
-background: -webkit-linear-gradient(top, {{ user.color1 }} , {{ user.color2 }}); 
-background: -o-linear-gradient(top,{{ user.color1 }}, {{ user.color2 }});
-background: -moz-linear-gradient(top,{{ user.color1 }}, {{ user.color2 }}); 
-background: linear-gradient(top,{{ user.color1 }}, {{ user.color2 }});
-
-
-color:{{ user.textcolor1 }};
-border: 1px solid #287cc2;
-font-weight:lighter;
-width: 480px; 
-margin-top:60px;
-box-shadow: 0px 0px 10px rgb(17, 17, 17);" >
+	<div class="card" >
         <br>
         <table>
         	<tr>
           		<td align="center">
-      					<img ng-src="{{ user.companylogo }}" style="max-width: 200px; max-height: 200px;">
+      					<img ng-src="{{ user.companylogo }}" class="logo">
       				<br>
           		</td>
           
-          		<td style="line-height:0.85;padding-right:20px;font-size:19px">
+          		<td class="name">
               {{ user.name }}
                 <br>
       
-              <span style="color:{{ user.textcolor2 }};font-size:16px;" align="right">{{ user.designation }}</span><br><br>
-                    <table style="table-layout: fixed;">
+              <span class="designation" align="right">{{ user.designation }}</span><br><br>
+                    <table class="table">
                     
               <tr>
-                <td style="color:{{ user.textcolor2 }};font-size:16px;line-height:1;padding-right:0px;">
-                  <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a ng-href="mailto:{{ user.email }}" class="" >{{ user.email }}</a></span><br>
-          <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a ng-href="http://{{ user.link1 }}" class=""  target="_blank">{{ user.link1 }}</a></span><br>
-          <span style="color:{{ user.textcolor2 }};font-size:14px;line-height:1;"><a ng-href="http://{{ user.link2 }}" class=""  target="_blank">{{ user.link2 }}</a></span><br><br>
+                <td class="content-td">
+                  <span class="email"><a ng-href="mailto:{{ user.email }}">{{ user.email }}</a></span><br>
+          <span class="link1"><a ng-href="http://{{ user.link1 }}" target="_blank">{{ user.link1 }}</a></span><br>
+          <span class="link2"><a ng-href="http://{{ user.link2 }}" target="_blank">{{ user.link2 }}</a></span><br><br>
           
                   
-    <span style="color:{{ user.textcolor1 }};font-size:20px"><a ng-href="https://www.twitter.com/{{ user.tusername }}" style="text-decoration:none;" target="_blank" title="@{{ user.tusername }}">&#160<i class="fa fa-twitter fa-fw"></i>&#160</a><span ng-show="!user.fusername && !user.gusername"><font size="3px">@ {{ user.tusername }}</font></span></span>
+    <span class="twitter"><a ng-href="https://www.twitter.com/{{ user.tusername }}" class="text-inner" target="_blank" title="@{{ user.tusername }}">&#160<i class="fa fa-twitter fa-fw"></i>&#160</a><span ng-show="!user.fusername && !user.gusername"><font size="3px">@ {{ user.tusername }}</font></span></span>
         
-    <span style="color:{{ user.textcolor1 }};font-size:20px" ng-if="user.fusername"><a ng-href="https://www.facebook.com/{{ user.fusername }}" style="text-decoration:none;" target="_blank" title="{{ user.name }} on facebook" >&#160<i class="fa fa-facebook fa-fw"></i>&#160</a></span>
+    <span class="facebook" ng-if="user.fusername"><a ng-href="https://www.facebook.com/{{ user.fusername }}" class="text-inner" target="_blank" title="{{ user.name }} on facebook" >&#160<i class="fa fa-facebook fa-fw"></i>&#160</a></span>
   
-        <span style="color:{{ user.textcolor1 }};font-size:20px" ng-if="user.gusername"><a ng-href="https://www.google.com/{{ user.gusername }}" style="text-decoration:none;" target="_blank" title="{{ user.name }} on google+">&#160<i class="fa fa-google-plus fa-fw"></i>&#160</a></span><br>
+        <span class="gplus" ng-if="user.gusername"><a ng-href="https://www.google.com/{{ user.gusername }}" class="text-inner" target="_blank" title="{{ user.name }} on google+">&#160<i class="fa fa-google-plus fa-fw"></i>&#160</a></span><br>
               			<br><br><br>
            
                 </td>
@@ -313,16 +196,18 @@ box-shadow: 0px 0px 10px rgb(17, 17, 17);" >
 
 
     </center>
-	
-	
-  <div id="footer" style="opacity: 0.8; position:absolute; left:0px; bottom:0px; height:20px; width:100%; background-color: #ffffff;">
-    <div id="footer_left" style="color: #000000; float: center; width: 70%; margin-left: 3%; font-family: 'Arimo', sans-serif;">
+
+  <div id="footer">
+    <div id="footer_left">
       <font size="2px">
         Copyright &copy; 2015 Tanay Pant. All rights reserved.
       </font>
     </div>
   </div>
-  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script>
+  	$("div.inputfield").on("click", function(){ $(this).prev.slideToggle("slow") });
+  </script>
   <script src="bower_components/angular/angular.js"></script>
 </body>
 </html>
