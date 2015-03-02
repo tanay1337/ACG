@@ -7,6 +7,18 @@
   <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
   <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+  <script>
+  	$(function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+    $( "#accordion1" ).accordion({
+      collapsible: true
+    });
+  });
+  </script>
 </head>
 
 <body ng-init="
@@ -24,7 +36,6 @@ user.fusername='...';
 user.gusername='+TanayPant1337'; " >
 
 	<nav id="header" class="navbar navbar-default" role="navigation">
-
     <div id="header_left" class="navbar-brand" title="Angular Card Generator">
 	<label for="Angular Card Generator">
       <span class="ACG">
@@ -34,74 +45,61 @@ user.gusername='+TanayPant1337'; " >
       </span>
       Angular Card Generator
 	</label>
-    </div>
-
-
-	
+    </div>	
   </nav>
 
 <div class="nav navbar-nav navbar-left" role="navigation">
-                <div class="sidebar-collapse">
-                    <ul class="nav" id="side-menu">
-                      <li>
-                            <a href="#" id="a"><i class="fa fa-user fa-fw"></i> Full Name</a>
-                            <div id="1" class="inputfield">
+                <div id="accordion" class="sidebar-collapse side-menu">
+                            <h5><a href="#"><i class="fa fa-user fa-fw"></i> Full Name</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 Full Name: <input type="text" ng-model="user.name" placeholder="Full Name" /><br>          
                               </p>
                             </div>                            
-                        </li>
-                        <li>
-                            <a href="#" id="b"><i class="fa fa-star fa-fw"></i> Designation</a>
-                            <div id="2"  class="inputfield">
+
+                            <h5><a href="#"><i class="fa fa-star fa-fw"></i> Designation</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 Designation: <input type="text" ng-model="user.designation" placeholder="Designation" /><br>
                               </p>
-                            </div>  
-                        </li>
-                        <li>
-                            <a href="#" id="c"><i class="fa fa-comment fa-fw"></i> Email-Id</a>
-                            <div id="3"  class="inputfield">
+                            </div>
+
+                            <h5><a href="#"><i class="fa fa-comment fa-fw"></i> Email-Id</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 Email-ID: <input type="text" ng-model="user.email" placeholder="Email-ID" /><br>
                               </p>
-                            </div> 
-                        </li>
-                        <li>
-                            <a href="#" id="d"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-1</a>
-                            <div id="4"  class="inputfield">
+                            </div>
+
+                            <h5><a href="#"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-1</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 http://<input type="text" ng-model="user.link1" placeholder="Personal Link-1" /><br>
                               </p>
-                            </div> 
-                        </li>
-                        <li>
-                            <a href="#" id="e"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-2</a>
-                            <div id="5"  class="inputfield">
+                            </div>
+
+                            <h5><a href="#"><i class="fa fa-hand-o-right fa-fw"></i> Personal Link-2</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 http://<input type="text" ng-model="user.link2" placeholder="Personal Link-2" /><br>
                               </p>
-                            </div> 
-                        </li>
-                        <li>
-                            <a href="#" id="g"><i class="fa fa-picture-o fa-fw"></i> Company Logo</a>
-                            <div id="7"  class="inputfield">
+                            </div>
+
+                            <h5><a href="#"><i class="fa fa-picture-o fa-fw"></i> Company Logo</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 Company Logo: <input type="text" ng-model="user.companylogo" placeholder="Company Logo URL" /><br>
                               </p>
                             </div> 
-                        </li>
                         <hr>
-                      </ul>
                   </div>
                 </div>
 
                 <div class="nav navbar-nav navbar-right" role="navigation">
-                <div class="sidebar-collapse">
-                    <ul class="nav" id="side-menu">
-                      <li>
-                            <a href="#" id="h"><i class="fa fa-qrcode fa-fw"></i> Card Gradient Color</a>
-                            <div id="8" class="inputfield">
+                <div id="accordion1" class="sidebar-collapse side-menu">
+
+                            <h5><a href="#"><i class="fa fa-qrcode fa-fw"></i> Card Gradient Color</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 Card Color1: <input type="color" ng-model="user.color1" placeholder="Card Color1" /><br>
                               </p>
@@ -109,49 +107,42 @@ user.gusername='+TanayPant1337'; " >
                                 Card Color2: <input type="color" ng-model="user.color2" placeholder="Card Color2" /><br>
                               </p>
                             </div> 
-                        </li>
-                        <li>
-                            <a href="#" id="i"><i class="fa fa-angle-right fa-fw"></i> Text Color-1</a>
-                            <div id="9" class="inputfield">
+
+                            <h5><a href="#"><i class="fa fa-angle-right fa-fw"></i> Text Color-1</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 Text-Color 1: <input type="color" ng-model="user.textcolor1" placeholder="Text-Color 1" /><br>
                               </p>
                             </div> 
-                        </li>
-                        <li>
-                            <a href="#" id="j"><i class="fa fa-angle-right fa-fw"></i> Text Color-2</a>
-                            <div id="10" class="inputfield">
+
+                            <h5><a href="#"><i class="fa fa-angle-right fa-fw"></i> Text Color-2</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 Text-Color 2: <input type="color" ng-model="user.textcolor2" placeholder="Text-Color 2" /><br>
                               </p>
                             </div> 
-                        </li>
-                        <li>
-                            <a href="#" id="f"><i class="fa fa-twitter fa-fw"></i> Twitter</a>
-                            <div id="6" class="inputfield">
+
+                            <h5><a href="#"><i class="fa fa-twitter fa-fw"></i> Twitter</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 twitter.com/<input type="text" ng-model="user.tusername" placeholder="Twitter Username" /><br>
                               </p>
                             </div> 
-                        </li>    
-                        <li>
-                            <a href="#" id="k"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
-                            <div id="11" class="inputfield">
+
+                            <h5><a href="#"><i class="fa fa-facebook fa-fw"></i> Facebook</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 facebook.com/<input type="text" ng-model="user.fusername" placeholder="Facebook Profile" /><br>
                               </p>
                             </div> 
-                        </li>
-                     <li>
-                            <a href="#" id="l"><i class="fa fa-google-plus fa-fw"></i> Google+</a>
-                            <div id="12" class="inputfield">
+
+                            <h5><a href="#"><i class="fa fa-google-plus fa-fw"></i> Google+</a></h5>
+                            <div class="inputfield">
                               <p class="sidebar-p">
                                 google.com/<input type="text" ng-model="user.gusername" placeholder="Google+ Profile" /><br>
                               </p>
                             </div> 
-                        </li>
                         <hr>
-                        </ul>
                   </div>
                 </div>
 	<center>
@@ -165,7 +156,7 @@ user.gusername='+TanayPant1337'; " >
           		</td>
           
           		<td class="name">
-              {{ user.name }}
+              		{{ user.name }}
                 <br>
       
               <span class="designation" align="right">{{ user.designation }}</span><br><br>
@@ -204,10 +195,6 @@ user.gusername='+TanayPant1337'; " >
       </font>
     </div>
   </div>
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script>
-  	$("div.inputfield").on("click", function(){ $(this).prev.slideToggle("slow") });
-  </script>
   <script src="bower_components/angular/angular.js"></script>
 </body>
 </html>
