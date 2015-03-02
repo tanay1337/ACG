@@ -146,7 +146,11 @@ user.gusername='+TanayPant1337'; " >
                   </div>
                 </div>
 	<center>
-	<div class="card" >
+	<div class="card" style="	background: -webkit-linear-gradient(top, {{ user.color1 }} , {{ user.color2 }}); 
+	background: -o-linear-gradient(top,{{ user.color1 }}, {{ user.color2 }});
+	background: -moz-linear-gradient(top,{{ user.color1 }}, {{ user.color2 }}); 
+	background: linear-gradient(top,{{ user.color1 }}, {{ user.color2 }});
+	color:{{ user.textcolor1 }};">
         <br>
         <table>
         	<tr>
@@ -159,21 +163,21 @@ user.gusername='+TanayPant1337'; " >
               		{{ user.name }}
                 <br>
       
-              <span class="designation" align="right">{{ user.designation }}</span><br><br>
+              <span class="designation" align="right" style="	color:{{ user.textcolor2 }};">{{ user.designation }}</span><br><br>
                     <table class="table">
                     
               <tr>
-                <td class="content-td">
-                  <span class="email"><a ng-href="mailto:{{ user.email }}">{{ user.email }}</a></span><br>
-          <span class="link1"><a ng-href="http://{{ user.link1 }}" target="_blank">{{ user.link1 }}</a></span><br>
-          <span class="link2"><a ng-href="http://{{ user.link2 }}" target="_blank">{{ user.link2 }}</a></span><br><br>
+                <td class="content-td" style="	color:{{ user.textcolor2 }};">
+                  <span class="email" style="	color:{{ user.textcolor2 }};"><a ng-href="mailto:{{ user.email }}">{{ user.email }}</a></span><br>
+          <span class="link1" style="	color:{{ user.textcolor2 }};"><a ng-href="http://{{ user.link1 }}" target="_blank">{{ user.link1 }}</a></span><br>
+          <span class="link2" style="	color:{{ user.textcolor2 }};"><a ng-href="http://{{ user.link2 }}" target="_blank">{{ user.link2 }}</a></span><br><br>
           
                   
-    <span class="twitter"><a ng-href="https://www.twitter.com/{{ user.tusername }}" class="text-inner" target="_blank" title="@{{ user.tusername }}">&#160<i class="fa fa-twitter fa-fw"></i>&#160</a><span ng-show="!user.fusername && !user.gusername"><font size="3px">@ {{ user.tusername }}</font></span></span>
+    <span class="twitter" style="	color:{{ user.textcolor1 }};"><a ng-href="https://www.twitter.com/{{ user.tusername }}" class="text-inner" target="_blank" title="@{{ user.tusername }}">&#160<i class="fa fa-twitter fa-fw"></i>&#160</a><span ng-show="!user.fusername && !user.gusername"><font size="3px">@ {{ user.tusername }}</font></span></span>
         
-    <span class="facebook" ng-if="user.fusername"><a ng-href="https://www.facebook.com/{{ user.fusername }}" class="text-inner" target="_blank" title="{{ user.name }} on facebook" >&#160<i class="fa fa-facebook fa-fw"></i>&#160</a></span>
+    <span class="facebook" style="	color:{{ user.textcolor1 }};" ng-if="user.fusername"><a ng-href="https://www.facebook.com/{{ user.fusername }}" class="text-inner" target="_blank" title="{{ user.name }} on facebook" >&#160<i class="fa fa-facebook fa-fw"></i>&#160</a></span>
   
-        <span class="gplus" ng-if="user.gusername"><a ng-href="https://www.google.com/{{ user.gusername }}" class="text-inner" target="_blank" title="{{ user.name }} on google+">&#160<i class="fa fa-google-plus fa-fw"></i>&#160</a></span><br>
+        <span class="gplus" style="	color:{{ user.textcolor1 }};" ng-if="user.gusername"><a ng-href="https://www.google.com/{{ user.gusername }}" class="text-inner" target="_blank" title="{{ user.name }} on google+">&#160<i class="fa fa-google-plus fa-fw"></i>&#160</a></span><br>
               			<br><br><br>
            
                 </td>

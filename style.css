@@ -22,12 +22,6 @@ body {
 }
 
 .card {
-	background: -webkit-linear-gradient(top, {{ user.color1 }} , {{ user.color2 }}); 
-	background: -o-linear-gradient(top,{{ user.color1 }}, {{ user.color2 }});
-	background: -moz-linear-gradient(top,{{ user.color1 }}, {{ user.color2 }}); 
-	background: linear-gradient(top,{{ user.color1 }}, {{ user.color2 }});
-
-	color:{{ user.textcolor1 }};
 	border: 1px solid #287cc2;
 	font-weight:lighter;
 	width: 480px; 
@@ -42,7 +36,6 @@ body {
 }
 
 .designation {
-	color:{{ user.textcolor2 }};
 	font-size:16px;
 }
 
@@ -51,32 +44,27 @@ body {
 }
 
 .content-td {
-	color:{{ user.textcolor2 }};
 	font-size:16px;
 	line-height:1;
 	padding-right:0px;
 }
 
 .email {
-	color:{{ user.textcolor2 }};
 	font-size:14px;
 	line-height:1;
 }
 
 .link1 {
-	color:{{ user.textcolor2 }};
 	font-size:14px;
 	line-height:1;
 }
 
 .link2 {
-	color:{{ user.textcolor2 }};
 	font-size:14px;
 	line-height:1;
 }
 
 .twitter {
-	color:{{ user.textcolor1 }};
 	font-size:20px;
 }
 
@@ -85,7 +73,7 @@ body {
 }
 
 .facebook {
-	color:{{ user.textcolor1 }};
+
 	font-size:20px;
 }
 
